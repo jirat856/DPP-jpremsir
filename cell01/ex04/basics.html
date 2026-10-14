@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:ital@1&display=swap');
+        body {
+            background-color: #FFC0CB;
+            font-family: 'Inter', Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+        }
+        img {
+            display: flex;
+            gap: 20px;
+        }
+        a {
+            text-decoration: none;
+        }
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 50px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        .shopping {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(255, 105, 180, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #FF69B4;
+            box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
+        }
+        .shopping:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .shopping img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .shopping a {
+            font-size: 18px;
+            font-weight: 600;
+            color: #FF69B4;
+            transition: color 0.3s ease;
+        }
+        .shopping a:hover {
+            color: #FF1493;
+        }  
+        .footer-copyright {
+            margin-top: 50px;
+            text-align: center;
+            color: #333;
+            font-family: 'Fira Code', monospace;
+            font-style: italic;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;" class="title">Basics✨</h1>
+    </header>
+
+    <main class="container">
+        <div class="shopping">
+            <img src="https://cloud.shopback.com/c_scale,c_auto,q_70,f_webp/media-production-aps1/O912S6506No/aHR0cHM6Ly9pbWFnZXMuYmFubmVyYmVhci5jb20vZGlyZWN0L0VHQnFwQVo1T2U5MTg5VkROSi9yZXF1ZXN0cy8wMDAvMDQ5LzQxOS8yNjMvRGRXYjFMR2tOWU5QNHFuRDY3ME9LdlJBUC84MTI0NjNmNDk0ZjQ5MDgyMGE3YTNhN2U2Mzk5ZjAxYjNiMzZkMDRmLnBuZw.jpg" alt="shopping tiktok">
+            <a href="https://www.tiktok.com/@tiktokshop_th" target="_blank">TikTok Shop</a>
+        </div>
+
+        <div class="shopping">
+            <img src="https://media-img-proxy-production-aps1.shopback.com/U7I_8l3CkM8/aHR0cHM6Ly9tZWRpYS1pbWctcHJveHktcHJvZHVjdGlvbi1hcHMxLnNob3BiYWNrLmNvbS9JYWFLaXNtMTFUQS9jek02THk5dFpXUnBZUzF6WlhKMmFXTmxMWE5pTFhCeWIyUXRkR2d2TVRWa01HSTFOVEV0WWpoa1lTMDBZVEF6TFRrMk1UY3RNVGs0Wm1Zd1pEUmtZMlUyTFZ0QmNIQmRJRTFsY21Ob1lXNTBJRXh2WjI4Z0t5QkRiMnh2Y2lCQ1lXTnJaM0p2ZFc1a0lDMGdNakVnZEdWdGNDNXdibWMucG5n.jpg" alt="temu shopping">
+            <a href="https://www.temu.com" target="_blank" >Temu Shopping</a>
+        </div>
+    </main> 
+
+    <footer class="footer-copyright">
+        <p style="text-align: right; margin-top: 50px; margin-right: 50px;">© jpremsir 2026</p>
+    </footer>
+</body>
+</html>
