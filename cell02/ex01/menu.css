@@ -1,0 +1,119 @@
+/* รีเซ็ตค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #04fdaa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #003399; /* สีน้ำเงินสไตล์ SNCF */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* ดีไซน์โครงสร้างเมนูดรอปดาวน์ (แซนด์วิช) */
+.sandwich-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-item {
+    position: relative;
+}
+
+/* ขนมปังชั้นบน (ปุ่มกดหลัก) */
+.sandwich-layer.bread-top {
+    display: block;
+    background: linear-gradient(135deg, #e6c280, #d4a359);
+    color: #fff;
+    padding: 18px 35px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(212, 163, 89, 0.4);
+    transition: all 0.3s ease;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.sandwich-layer.bread-top:hover {
+    background: linear-gradient(135deg, #d4a359, #c29248);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 163, 89, 0.6);
+}
+
+/* ไส้แซนด์วิชที่ซ่อนอยู่ (Dropdown Content) */
+.sandwich-filling {
+    display: none; /* ซ่อนไว้ก่อนในยามปกติ */
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 10;
+    border: 1px solid #eee;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* เอฟเฟกต์แอนิเมชันเปิดไส้แซนด์วิช */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* รายการไส้แต่ละชิ้น */
+.ingredient {
+    display: block;
+    padding: 12px 20px;
+    color: #444;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s, padding-left 0.2s;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.ingredient:last-child {
+    border-bottom: none;
+}
+
+/* สีสันน่าทานและลูกเล่นเวลา Hover แต่ละไส้ */
+.ingredient.butter:hover { background-color: #fff9e6; color: #b8970b; padding-left: 25px; }
+.ingredient.ham:hover { background-color: #ffe6e6; color: #cc3333; padding-left: 25px; }
+.ingredient.cheese:hover { background-color: #fff4d1; color: #d9a300; padding-left: 25px; }
+.ingredient.salad:hover { background-color: #e6ffed; color: #28a745; padding-left: 25px; }
+
+/* เมื่อเอาเมาส์ไปชาร์จที่เมนูหลัก ให้แสดงไส้แซนด์วิชออกมา (Pure CSS Dropdown) */
+.menu-item:hover .sandwich-filling {
+    display: block;
+}
